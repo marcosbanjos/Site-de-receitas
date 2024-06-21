@@ -1,0 +1,12 @@
+create database receitas;
+
+use receitas;
+
+create table cadastros (
+    idReceitas integer not null auto_increment primary key,
+    titulo varchar(255) not null,
+    ingredientes longtext not null,
+    modoPreparo longtext not null,
+    criador varchar(100),
+    fotoReceita varchar(25)
+);

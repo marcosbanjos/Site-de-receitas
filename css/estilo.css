@@ -1,0 +1,349 @@
+/* estilo do projeto Agenda 2024 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    font-family: 'Segoe UI', Comic, Verdana, sans-serif;
+    background-image: url(../img/Design\ sem\ nome\ \(3\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+}
+
+.conteudo{
+    width: 100vw;
+    height: 93.3vh;
+    display: flex;
+    align-items: center; /* alinhamento na vertical */
+    justify-content: center; /* alinhamento na horizontal */
+    flex-direction: column; /* altera a direção dos objetos na div */
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+    font-weight: lighter;
+    font-size: 4rem;
+    color:#ddd
+}
+
+.botao{
+    padding: 20px 40px;
+    background-color: rgb(226, 80, 43);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    font-weight: lighter;
+    color: #b18484;
+
+}
+
+/* TABELA */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    margin: 20px 0;
+}
+
+tr{
+    border: 2px solid #070707;    
+}
+
+th{
+    height: 40px;
+    background-color: #656e64f3;
+    color: white;
+}
+
+th, td{
+    border: 1px solid #aaa;
+    padding: 3px;    
+}
+
+tr:hover{
+    background-color: #ddd;
+}
+
+td > a > img{
+    margin-top: 5px;
+}
+/* TABELA FINAL*/
+
+/* MENU */
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    background-color: #c75f1a;
+    height: 60px; /* altura da div menu */
+    justify-content: left; /* alinhamento horizontal */
+    align-items: center; /* alinhamento na vertical */
+    color: white;
+    font-weight: 600; /* letra em negrito */
+   
+}
+
+.menu ul li{
+    padding: 15px 50px;
+    border-radius: 5px;
+}
+
+.menu ul li:hover{
+    background-color: #b9b4b0d5;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MENU FINAL*/
+
+/* INPUTS */
+
+input[type="text"], 
+input[type="big"],
+input[type="password"]{
+    width: 100%;
+    height: 35px;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #c75f1a;
+    margin-top: 5px;
+}
+
+input[type="big"]{
+    width: 100%;
+    height: 95px;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #c75f1a;
+    margin-top: 5px;
+}
+
+input[type="reset"]{
+    background-color: #fdfdfd;
+    border: 1px solid #0c0c0c;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+input[type="submit"]{
+    background-color: green;
+    border: 1px solid green;
+    padding: 15px 35px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+input[type="submit"]:hover{
+    background-color: mediumseagreen;
+}
+
+/* INPUTS FINAL*/
+
+.row{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.col{
+    width: 100%;
+
+}
+.col label{
+    color: #0a0a0a;
+    
+}
+
+.fundoAzul{
+    background-color: #c75f1a;
+}
+.visual{
+    position: relative;
+    border-radius: 20px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    background-color: #f8f4f4d2;
+    margin: 50px;
+}
+.visual2{
+    height: 250px;
+    width: 400px;
+    position: absolute;
+    border-radius: 20px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    background-color: #f8f4f496;
+    margin-top: 15%;
+    margin-left: 37%;
+}
+.cube-loader {
+    position: relative;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+}
+  
+@keyframes animate {
+    0% {
+      transform: rotateX(-30deg) rotateY(0);
+    }
+  
+    100% {
+      transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+  
+.cube-loader .cube-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    transform-style: preserve-3d;
+}
+  
+.cube-loader .cube-wrapper .cube-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+                                       /* width 75px / 2 = 37.5px */
+    transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+    background: hsla(0, 100%, 95%, 1);
+    background: linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -moz-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+}
+  
+.cube-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: hsla(0, 100%, 95%, 1);
+    background: linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -moz-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+                        /* width 75px / 2 = 37.5px */
+    transform: rotateX(90deg) translateZ(37.5px);
+    transform-style: preserve-3d;
+}
+  
+.cube-top::before {
+    content: '';
+    position: absolute;
+  /* u can choose any size */
+    width: 75px;
+    height: 75px;
+    background: hsla(0, 100%, 95%, 1);
+    background: linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -moz-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+    background: linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -moz-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 100%, 95%, 1) 1%, hsla(27, 100%, 85%, 1) 99%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffe3e3", endColorstr="#ffd5b2", GradientType=1 );
+    transform: translateZ(-90px);
+    filter: blur(10px);
+    box-shadow: 0 0 10px #323232,
+                0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+                0 0 30px #323232,
+                0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+}
+
+button {
+    --c: #fff;
+   /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #c75f1a;
+   /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+    text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+      calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+  }
+  
+  button:hover,
+  button:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+  }
+  
+  button:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+  }
+  
+  button {
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px;
+    cursor: pointer;
+    padding: .3em .9em;
+  }
+.colPerfil{
+    display: flex;
+    justify-content: center;
+    width: 180px;
+}
+
+.perfil{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    height:100px;
+    width: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+input[type="file"]{
+    display: none;
+}
+  
+  
